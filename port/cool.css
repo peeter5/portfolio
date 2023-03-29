@@ -163,7 +163,7 @@ section.landing{
 }
 section.landing .container{
     display: grid;
-    grid-template-columns: 5rem auto 26rem;
+    grid-template-columns: 7rem auto 26rem;
     gap: 2rem;
 
 }
@@ -572,7 +572,7 @@ footer .copyright ul{
         overflow: hidden;
     }
     section.landing .container{
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         grid-template-rows: 20% 50%;
         text-align: center;
         row-gap: 6rem;
@@ -787,19 +787,16 @@ footer .copyright ul{
         grid-row: 1;
         width: 94%;
         margin: 0 auto;
-
     }
 
     section.landing .container .outer-circle{
         width: 16rem;
         height: 16rem;
-        margin-top: 22rem;
-        margin-bottom: 13rem;
     }
     section.landing .container .inner-circle{
         width: 10rem;
         height: 10rem;
-        margin-top: 9rem;
+
     }
     section.landing .container .outer-circle span{
         width: 3rem;

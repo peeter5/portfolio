@@ -22,14 +22,14 @@ closeBtn.addEventListener('click',()=>{
     closeBtn.style.display='none';
 
 })
-//const navItems=menu.querySelector('.li');
+const navItems=menu.querySelector('.li');
 
-//navItems.forEach(item =>{
-  //  const link =item.querySelector('.a');
-    //link.addEventListener('click',()=>{
-      //  link.class
-    //})
-//})
+navItems.forEach(item =>{
+    const link =item.querySelector('.a');
+    link.addEventListener('click',()=>{
+        link.class
+    })
+})
 
 //read
 const readMoreBtn =document.querySelector('.read-more')
