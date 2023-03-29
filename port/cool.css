@@ -289,74 +289,33 @@ section.about .container .read-more:hover{
     text-decoration: underline;
 }
 /* **********************skills  Section************************* */
-
-section.skills .container{
-    width: 50%;
-}
-
-section.skills .skill{
-    margin-bottom: 1rem;
-}
-
-section.skills .skill .head{
-    background: var(--color-primary);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: var(--color-white);
-    padding: 1.6rem;
-    cursor: pointer;
-}
-
-section.skills .skill .head h4{
-    color: var(--color-white);
-    
-}
-
-section.skills .skill .head .left{
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-section.skills .skill .item{
+section.skills{
+    background: var(--color-light);
     display: flex;
     flex-direction: column;
-    align-items: start;
-    gap: 1rem;
-    padding: 1.6rem;
-    background: var(--color-light);
-    margin-bottom: 0.3rem;
+}
+section.skills .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+}
+section.skills .skill{
+    background: var(--color-white);
+    padding: 3rem 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    cursor: default;
     transition: var(--transition);
 }
+section.skills .skill:hover{
+    box-shadow: 0.3rem 3rem var(--color-primary-light);
+}
 
-section.skills .skill .item:hover{
-    background: var(--color-white);
-
-}
-section.skills .skill .progress-area{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-
-}
-section.skills .item .progress-bar{
-    width: 100%;
-    height: 1rem;
-    background: var(--color-primary-light);
-}
-section.skills .item .progress-bar .progress{
-    height: 100%;
-    width: 92%;
-    background: var(--color-primary);
-}
-section.skills .item:nth-child(2) .progress-bar .progress{
-    width: 88%;
-
-}
-section.skills .item:nth-child(3) .progress-bar .progress{
-    width: 75%;
+section.skills .skill img{
+    width: 20rem;
+    height: 20rem;
 }
 
 /*:::::::::::::::::::::::::::::::SERvICES::::::::::::::::::::::::::::::::::::::::;;;*/
@@ -381,7 +340,7 @@ section.services .container .service{
 }
 
 section.services .container .service:hover{
-    box-shadow: 0.3rem 3rem --color-primary-light;
+    box-shadow: 0.3rem 3rem var(--color-primary-light);
 }
 
 section.services .container .service span{
@@ -429,56 +388,6 @@ section.recent-work .projects .project .action a{
 }
 section.recent-work .projects .project .action a:hover{
     text-decoration: underline;
-}
-
-/**********************TESTIMONIALS SECTION----------------------------------*/
-section.testimonials{
-    background: var(--color-light);
-
-}
-section.testimonials .container{
-    width: 44rem;
-
-}
-section.testimonials .carousel{
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    flex-direction: column;
-}
-
-section.testimonials .testimonial{
-    background: var(--color-white);
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    font-size: 0.9rem;
-    margin-bottom: 2rem;
-}
-section.testimonials .testimonial .head{
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
-}
-
-section.testimonials .testimonial .head .profile-area{
-    display: flex;
-    gap: 1rem;
-}
-
-section.testimonials .testimonial .head .profile-area .avatar{
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
-    overflow: hidden;
-}
-section.testimonials .testimonial .head .stars{
-    color: var(--color-primary);
-
-}
-section.testimonials .testimonial .head .stars span{
-    font-size: 1rem;
 }
 
 /************************************contactme*/
@@ -591,9 +500,200 @@ footer .copyright{
 footer .copyright ul{
     margin: auto 6rem;
 }
+/***************************tablets*********************/
+@media screen and (max-width: 1200px){
+    h1{
+        font-size: 3rem;
+    }
+    h2{
+        font-size: 2.8rem;
+    }
+    h3{
+        font-size: 1.5rem;
+    }
+    h4{
+        font-size: 1.2rem;
+    }
+    h5{
+        font-size: 1.0rem;
+    }
+
+    /**********************na*****************/
+    nav{
+        box-shadow: 0 1rem 1rem rgba(0, 0,0, 0.1);
+    }
+    nav h3{
+        margin-left: 1rem;
+    }
+    nav .container{
+        width: 100%;
+    }
+    nav .container ul{
+        position: fixed;
+        top: 0;
+        flex-direction: column;
+        z-index: 3;
+        width: 16rem;
+        height: 100vh;
+        background: var(--color-white);
+        box-shadow: 1rem 0 2rem var(--color-primary-light);
+        display: none;
+
+    }
+    nav ul li{
+        height: 4.6rem;
+        width: 100%;
+    }
+    nav .container ul li a{
+        width: 100%;
+        justify-content: start;
+        padding-left: 2rem;
+    }
+    nav .container ul li a:hover{
+        padding-left: 3rem;
+    }
+    nav button{
+        display: inline-block;
+        cursor: pointer;
+        background: transparent;
+        color: var(--color-black);
+        margin-right: 1rem;
+
+    }
+    nav button#close-btn{
+        display: none;
+    }
+
+    /********************/
+    section.landing{
+        margin-top: -4rem;
+        padding-bottom: 7rem;
+        max-width: 100vw;
+        overflow: hidden;
+    }
+    section.landing .container{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 20% 50%;
+        text-align: center;
+        row-gap: 6rem;
+
+    }
+    section.landing .container .social{
+        display: none;
+    }
+
+    section.landing .container .info h1{
+        text-align: center;
+
+    }
+    section.landing .container .info p{
+        margin: 0 auto;
+        width: 92%;
+    }
+    section.landing .container .profile-area{
+        grid-row: 1;
+        width: 94%;
+        margin: 0 auto;
+
+    }
+
+    section.landing .container .outer-circle{
+        width: 16rem;
+        height: 16rem;
+        margin-top: 22rem;
+        margin-bottom: 13rem;
+    }
+    section.landing .container .inner-circle{
+        width: 10rem;
+        height: 10rem;
+        margin-top: 9rem;
+    }
+    section.landing .container .outer-circle span{
+        width: 3rem;
+        height: 3rem;
+    }
+    section.landing .profile-area .outer-circle span:nth-child(1){
+        left: calc(50% - 1.5rem);
+        top: -2rem ;
+    }
+    section.landing .profile-area .outer-circle span:nth-child(2){
+        right: -2rem;
+        top: calc(50% - 1.5rem);
+    }
+    section.landing .profile-area .outer-circle span:nth-child(3){
+        left: -2rem;
+        top: calc(50% - 1.5rem);
+    }
+    section.landing .profile-area .outer-circle span:nth-child(4){
+        bottom: -2rem;
+        left: calc(50% - 1.5rem);
+    }
+    /*********************************ABOUT*******************/
+    section.about .container{
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        text-align: center;
+
+    }
+    /****************************SKILLS***************************/
+    section.skills h2{
+        width: 94vw;
+        margin: 1.4rem 0 1rem;
+    }
+
+    section.skills .container{
+        align-items: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 94%;
+    }
+    section.skills .container .skill{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    /**********************************SERICES**********************/
+    section.services .container{
+        grid-template-columns: 1fr 1fr;
+    }
+    /*********************************PORTFOLIO********************/
+    section.recent-work .projects{
+        grid-template-columns: 1fr 1fr;
+    }
+    section.recent-work  .container h1{
+        width: 94vw;
+        margin: 1.4rem 0 1rem;
+    }
+   
+    /******************CONTACT*****************/
+    section.contact .container{
+        width: 94vw;
+    }
+    section.contact .container .p{
+        width: 80vw;
+        margin: 0.5rem 0 auto;
+    }
+    /********************Footer************/
+    footer .container{
+        flex-direction: column;
+        gap: 3rem;
+    }
+    footer .container ul{
+        flex-direction: column;
+        text-align: center;
+        gap: 1.4rem;
+    }
+    footer .copyright ul{
+        margin: auto 6rem;
+    }
+}
 
 /**************************RESPOSITY**********************/
 @media screen and (max-width: 600px){
+    body{
+        background: white;
+
+    }
     h1{
         font-size: 2.2rem;
 
@@ -729,9 +829,21 @@ footer .copyright ul{
 
     }
     /****************************SKILLS***************************/
-    section.skills .container{
-        width: 94%;
+    section.skills h2{
+        width: 94vw;
+        margin: 1.4rem 0 1rem;
+    }
 
+    section.skills .container{
+        align-items: center;
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 94%;
+    }
+    section.skills .container .skill{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
     }
     /**********************************SERICES**********************/
     section.services .container{
@@ -745,14 +857,7 @@ footer .copyright ul{
         width: 94vw;
         margin: 1.4rem 0 1rem;
     }
-    /*********************8TESTIMONIALS****************/
-    section.testimonials .container {
-        grid-template-columns: 1fr;
-        width: 92vw;
-    }
-    section.testimonials .container .testimonial .head .stars span{
-        font-size: 0.8rem;
-    }
+   
     /******************CONTACT*****************/
     section.contact .container{
         width: 94vw;
