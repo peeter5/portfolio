@@ -6,30 +6,14 @@
     },
 });*/
 
-const menuBtn = document.querySelector('#menu-btn');
-const closeBtn = document.querySelector('#close-btn');
-const menu = document.querySelector('#ul');
+/*const navItems=menu.querySelector('.li');
 
-menuBtn.addEventListener('click', ()=>{
-    menu.style.display='block';
-    menuBtn.style.display='none'
-    closeBtn.style.display='inline-block';
-})
-//hide
-closeBtn.addEventListener('click',()=>{
-    menu.style.display='none';
-    menuBtn.style.display='inline-block';
-    closeBtn.style.display='none';
-
-})
-const navItems=menu.querySelector('.li');
-
-navItems.forEach(item =>{
+/*navItems.forEach(item =>{
     const link =item.querySelector('.a');
     link.addEventListener('click',()=>{
-        link.class
+        link.classList.add='active'
     })
-})
+})*/
 
 //read
 const readMoreBtn =document.querySelector('.read-more')
@@ -43,3 +27,29 @@ readMoreBtn.addEventListener('click',()=>{
         readMoreBtn.textContent="show more"
     }
 })
+$(document).ready(function() {
+    const menuBtn = $('#menu-btn');
+    const closeBtn = $('#close-btn');
+    const menu = $('#ul');
+    const navItems=$('.li')
+
+
+
+    $(menuBtn).click(function(){
+        $(menu).css('display', "block");
+        $(menuBtn).css('display', "none")
+        $(closeBtn).css('display', "inline-block")
+        // action goes here!!
+      });
+    $(closeBtn).click(function(){
+        $(menu).css('display', "none");
+        $(menuBtn).css('display', "inline-block");
+        $(closeBtn).css('display', "none")
+
+    })
+    $('.li').each(
+        function() {
+            $(this).addClass('active');
+        }
+        );
+ });

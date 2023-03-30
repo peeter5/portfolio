@@ -57,7 +57,7 @@ p{
     line-height: 1.8;
 }
 .container{
-    width: 92%;
+    width: 96vw;
     margin: 0 auto;
 
 }
@@ -158,7 +158,7 @@ section.landing{
     place-items: center;
     position: relative;
     top: 5rem;
-    padding-bottom: 14rem;
+    padding-bottom: 10rem;
 
 }
 section.landing .container{
@@ -489,16 +489,27 @@ footer .container .social a:hover{
     color: var(--color-white);
 
 }
+footer .container .social a.social-icon{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    padding: 0;
+    margin: 0;
+}
 footer .copyright{
     background: var(--color-primary);
     color: var(--color-white);
-    margin: 5rem;
-    padding: 2rem 0;
+    margin: 0;
+    padding: 0;
     font-size: 0.8rem;
+    align-items: center;
+    display: flex;
 
 }
 footer .copyright ul{
-    margin: auto 6rem;
+    margin: auto 10rem;
+    height: 5rem;
+    background: blue;
 }
 /***************************tablets*********************/
 @media screen and (max-width: 1200px){
