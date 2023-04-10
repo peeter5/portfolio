@@ -511,6 +511,11 @@ footer .copyright ul{
     height: 5rem;
     background: blue;
 }
+/**************************************Laptops************************/
+@media screen and (max-width: 1200px){
+    
+    
+}
 /***************************tablets*********************/
 @media screen and (max-width: 1200px){
     h1{
