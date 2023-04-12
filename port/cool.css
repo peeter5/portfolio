@@ -8,10 +8,10 @@
     --color-primary-light: hsl(14, 89%, 53%, 12%);
     --color-success: #29f5e31;
     --color-warning: #ffce31;
-
     --transition: all 300ms ease;
 
 }
+
 *{
     margin: 0;
     padding: 0;
@@ -19,48 +19,55 @@
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
-
 }
+
 html{
+    font: sans-serif;
     font-size: 15px;
     scroll-behavior: smooth;
-
 }
+
 body{
     background-color: var(--color-white);
     font-family: 'Nunito', sans-serif;
     color: var(--color-dark);
     max-width: 100vw;
-
 }
+
 h1,h2,h3,h5,h4{
     color: var(--color-black);
     line-height: 1.2;
 
 }
+
 h1{
     font-size: 3.8rem;
 }
+
 h2{
     font-size: 2.6rem;
 }
+
 h3{
     font-size: 1.6rem;
 }
+
 h4{
     font-size: 1.2rem;
 }
 h5{
     font-size: 0.86rem;
 }
+
 p{
     line-height: 1.8;
 }
+
 .container{
     width: 96vw;
     margin: 0 auto;
-
 }
+
 .section{
     padding: 10rem 0 7rem;
     max-width: 100vw;
@@ -580,7 +587,7 @@ footer .copyright ul{
         display: none;
     }
 
-    /********************/
+    /*********Landing***********/
     section.landing{
         margin-top: -4rem;
         padding-bottom: 7rem;
